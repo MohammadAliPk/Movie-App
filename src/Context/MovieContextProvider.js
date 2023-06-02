@@ -10,11 +10,10 @@ const MovieContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      setMovies(await getMovies(3));
+      setMovies(await getMovies(5));
     };
     fetchApi();
   }, []);
-  console.log(movies);
   return (
     <MovieContext.Provider value={movies}>{children}</MovieContext.Provider>
   );

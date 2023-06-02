@@ -14,7 +14,6 @@ const SeriesContextProvider = ({ children }) => {
     };
     fetchApi();
   }, []);
-  console.log(series);
   return (
     <SeriesContext.Provider value={series}>{children}</SeriesContext.Provider>
   );
