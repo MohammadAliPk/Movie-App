@@ -1,17 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import axios from "axios";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+axios.defaults.headers.common["Authorization"] =
+  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjkxOTFjOGZmNTU1YzA5MjE5YmFmMWVkYTM1Njg2YSIsInN1YiI6IjY0NzNkZGQwNWNkMTZlMDBhNjU2NzRmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Us2ScDTCUT5GVlDUfykDmIB3sZblEoZjzks19aTEa_4";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
