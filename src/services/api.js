@@ -14,4 +14,11 @@ const getSeries = async (page) => {
   return response.data.results;
 };
 
-export { getMovies, getSeries };
+const getTrending = async () => {
+  const response = await axios.get(
+    "https://api.themoviedb.org/3/trending/all/day?language=en-US"
+  );
+  return response.data.results;
+};
+
+export { getMovies, getSeries, getTrending };
