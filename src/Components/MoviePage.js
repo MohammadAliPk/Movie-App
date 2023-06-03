@@ -6,7 +6,6 @@ import Card from "./shared/Card";
 
 const MoviePage = () => {
   const movies = useContext(MovieContext);
-  console.log(movies);
 
   return (
     <div>
