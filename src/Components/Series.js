@@ -1,16 +1,26 @@
 import React, { useContext } from "react";
-import Card from "./shared/Card";
+
+import { useParams } from "react-router-dom";
+
+// Components
+import CardSeries from "./shared/CardSeries";
 
 // Context
-import { SeriesContext } from "../Context/SeriesContextProvider";
+import SeriesContextProvider, {
+  SeriesContext,
+} from "../Context/SeriesContextProvider";
 
 const Series = () => {
+  const params = useParams();
+  const id = params.id;
+
   const series = useContext(SeriesContext);
 
   return (
     <div>
+      <SeriesContextProvider id={id} />
       {series.map((serie) => (
-        <Card data={serie} key={serie.id}></Card>
+        <CardSeries data={serie} key={serie.id}></CardSeries>
       ))}
     </div>
   );

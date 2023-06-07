@@ -18,10 +18,10 @@ const App = () => {
         <SeriesContextProvider>
           <TopRatedContextProvider>
             <Routes>
-              <Route path="/movies" element={<MoviePage />} />
-              <Route path="/series" element={<Series />} />
+              <Route path="/movies/:id" element={<MoviePage />} />
+              <Route path="/series/:id" element={<Series />} />
               <Route path="/trending" element={<Trendings />} />
-              <Route path="/" element={<Navigate to="/movies" />} />
+              <Route path="/*" element={<Navigate to="/movies/1" />} />
             </Routes>
           </TopRatedContextProvider>
         </SeriesContextProvider>

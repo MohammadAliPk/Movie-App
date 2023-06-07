@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "./shared/Card";
+import CardMovie from "./shared/CardMovie";
 
 // Context
 import { TrendingContext } from "../Context/TrendingContextProvider";
@@ -9,7 +9,7 @@ const Trendings = () => {
   return (
     <div>
       {trendings.map((top) => (
-        <Card data={top} key={top.id}></Card>
+        <CardMovie data={top} key={top.id}></CardMovie>
       ))}
     </div>
   );
