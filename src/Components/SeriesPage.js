@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 // Components
 import CardSeries from "./shared/CardSeries";
+import CustomPagination from "./shared/Pagination";
 
 // Context
 import { SeriesContext } from "../Context/SeriesContextProvider";
@@ -14,6 +15,7 @@ import { getSeries } from "../services/api";
 const SeriesPage = () => {
   const params = useParams();
   const id = params.id;
+  const location = useLocation();
 
   const { series, setSeries } = useContext(SeriesContext);
 
@@ -30,6 +32,12 @@ const SeriesPage = () => {
       {series.map((serie) => (
         <CardSeries data={serie} key={serie.id}></CardSeries>
       ))}
+      <CustomPagination
+        currentPage={params.page}
+        totalPages={200}
+        variableName="series"
+        location={location}
+      />
     </div>
   );
 };

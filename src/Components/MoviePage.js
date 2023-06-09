@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 // Components
 import CardMovie from "./shared/CardMovie";
+import CustomPagination from "./shared/Pagination";
 
 // Context
 import { MovieContext } from "../Context/MovieContextProvider";
@@ -13,6 +14,7 @@ import { getMovies } from "../services/api";
 const MoviePage = () => {
   const params = useParams();
   const id = params.id;
+  const location = useLocation();
 
   const { movies, setMovies } = useContext(MovieContext);
 
@@ -30,6 +32,12 @@ const MoviePage = () => {
       {movies.map((movie) => (
         <CardMovie data={movie} key={movie.id}></CardMovie>
       ))}
+      <CustomPagination
+        currentPage={params.page}
+        totalPages={200}
+        variableName="movies"
+        location={location}
+      />
     </div>
   );
 };
