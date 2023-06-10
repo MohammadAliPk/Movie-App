@@ -10,6 +10,7 @@ import TopRatedContextProvider from "./Context/TrendingContextProvider";
 import SeriesPage from "./Components/SeriesPage";
 import MoviePage from "./Components/MoviePage";
 import Trendings from "./Components/Trendings";
+import Details from "./Components/Details";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/trending" element={<Trendings />} />
               <Route path="/*" element={<Navigate to="/movies/1" />} />
               <Route path="/series" element={<Navigate to="/series/1" />} />
+              <Route path="/detail/:type/:id" element={<Details />} />
             </Routes>
           </TopRatedContextProvider>
         </SeriesContextProvider>

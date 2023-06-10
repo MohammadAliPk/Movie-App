@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
-import CardMovie from "./shared/CardMovie";
+import CardTrending from "./shared/CardTrending";
 
 // Context
 import { TrendingContext } from "../Context/TrendingContextProvider";
+
 const Trendings = () => {
   const trendings = useContext(TrendingContext);
 
   return (
     <div>
       {trendings.map((top) => (
-        <CardMovie data={top} key={top.id}></CardMovie>
+        <CardTrending data={top} key={top.id}></CardTrending>
       ))}
     </div>
   );

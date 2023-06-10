@@ -21,4 +21,14 @@ const getTrending = async () => {
   return response.data.results;
 };
 
-export { getMovies, getSeries, getTrending };
+const movieDetail = async (id) => {
+  const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}`);
+  return response.data;
+};
+
+const seriesDetail = async (id) => {
+  const response = await axios.get(`https://api.themoviedb.org/3/tv/${id}`);
+  return response.data;
+};
+
+export { getMovies, getSeries, getTrending, movieDetail, seriesDetail };

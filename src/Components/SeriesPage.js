@@ -23,6 +23,7 @@ const SeriesPage = () => {
     const fetchSeries = async () => {
       const movies = await getSeries(id);
       setSeries(movies);
+      console.log(movies);
     };
     fetchSeries();
   }, [id, setSeries]);
@@ -30,11 +31,11 @@ const SeriesPage = () => {
   return (
     <div>
       {series.map((serie) => (
-        <CardSeries data={serie} key={serie.id}></CardSeries>
+        <CardSeries data={serie} key={serie.id} type="tv"></CardSeries>
       ))}
       <CustomPagination
         currentPage={params.page}
-        totalPages={200}
+        totalPages={500}
         variableName="series"
         location={location}
       />

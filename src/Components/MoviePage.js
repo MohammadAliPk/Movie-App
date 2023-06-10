@@ -30,11 +30,11 @@ const MoviePage = () => {
   return (
     <div>
       {movies.map((movie) => (
-        <CardMovie data={movie} key={movie.id}></CardMovie>
+        <CardMovie data={movie} key={movie.id} type="movie"></CardMovie>
       ))}
       <CustomPagination
         currentPage={params.page}
-        totalPages={200}
+        totalPages={500}
         variableName="movies"
         location={location}
       />

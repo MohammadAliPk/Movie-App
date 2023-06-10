@@ -6,7 +6,7 @@ import { getTrending } from "../services/api";
 export const TrendingContext = React.createContext();
 
 const TrendingContextProvider = ({ children }) => {
-  const [Trendings, setTrendings] = useState([]);
+  const [trendings, setTrendings] = useState([]);
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -14,8 +14,9 @@ const TrendingContextProvider = ({ children }) => {
     };
     fetchApi();
   }, []);
+  console.log(trendings);
   return (
-    <TrendingContext.Provider value={Trendings}>
+    <TrendingContext.Provider value={trendings}>
       {children}
     </TrendingContext.Provider>
   );

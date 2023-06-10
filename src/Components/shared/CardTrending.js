@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 
 const Card = (props) => {
   const {
-    name,
+    original_name,
     original_language,
     vote_average,
     poster_path,
     release_date,
     id,
+    media_type,
   } = props.data;
-
-  const type = props.type;
 
   return (
     <div>
@@ -20,11 +19,11 @@ const Card = (props) => {
         src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
         alt="poster"
       />
-      <h2>{name}</h2>
+      <h2>{original_name}</h2>
       <div>
         <h4>{original_language}</h4>
         <h1>{release_date}</h1>
-        <Link to={`/detail/${type}/${id}`}>Details</Link>
+        <Link to={`/detail/${media_type}/${id}`}>Details</Link>
       </div>
     </div>
   );
