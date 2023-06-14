@@ -28,8 +28,6 @@ const Details = () => {
     }
   }, [id, type]);
 
-  console.log(seriesData);
-
   if (type === "movie") {
     const {
       original_title,
@@ -75,8 +73,8 @@ const Details = () => {
           src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
           alt={name}
         />
-        <h2>{name} :نام فیلم</h2>
-        <h4> {original_language} :زبان فیلم</h4>
+        <h2>{name} :نام سریال</h2>
+        <h4> {original_language} :زبان سریال</h4>
         <h3>{overview}</h3>
         <p>تعداد فصل ها : {number_of_seasons}</p>
         <p>تعداد قسمت ها : {number_of_episodes}</p>

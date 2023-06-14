@@ -11,6 +11,8 @@ import SeriesPage from "./Components/SeriesPage";
 import MoviePage from "./Components/MoviePage";
 import Trendings from "./Components/Trendings";
 import Details from "./Components/Details";
+import Header from "./Components/shared/Header";
+import Footer from "./Components/shared/Footer";
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
       <MovieContextProvider>
         <SeriesContextProvider>
           <TopRatedContextProvider>
+            <Header />
             <Routes>
               <Route path="/movies/:id" element={<MoviePage />} />
               <Route path="/series/:id" element={<SeriesPage />} />
@@ -26,6 +29,7 @@ const App = () => {
               <Route path="/series" element={<Navigate to="/series/1" />} />
               <Route path="/detail/:type/:id" element={<Details />} />
             </Routes>
+            <Footer />
           </TopRatedContextProvider>
         </SeriesContextProvider>
       </MovieContextProvider>

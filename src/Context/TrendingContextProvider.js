@@ -14,7 +14,6 @@ const TrendingContextProvider = ({ children }) => {
     };
     fetchApi();
   }, []);
-  console.log(trendings);
   return (
     <TrendingContext.Provider value={trendings}>
       {children}

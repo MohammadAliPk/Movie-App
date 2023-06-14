@@ -1,22 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Styles
-import styles from "./Card.module.css";
-
 // Functions
 import { shorten } from "../../helpers/functions";
 
+// Styles
+import styles from "./Card.module.css";
+
 const Card = (props) => {
-  const {
-    title,
-    name,
-    original_language,
-    vote_average,
-    poster_path,
-    id,
-    media_type,
-  } = props.data;
+  const { name, title, original_language, vote_average, poster_path, id } =
+    props.data;
+
+  const type = props.type;
 
   return (
     <div className={styles.container}>
@@ -30,11 +25,11 @@ const Card = (props) => {
       />
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>
-          {media_type === "movie" ? shorten(title) : shorten(name)}
+          {type === "movie" ? shorten(title) : shorten(name)}
         </h2>
         <h3 className={styles.language}>{original_language}</h3>
       </div>
-      <Link className={styles.link} to={`/detail/${media_type}/${id}`}>
+      <Link className={styles.link} to={`/detail/${type}/${id}`}>
         Details
       </Link>
     </div>

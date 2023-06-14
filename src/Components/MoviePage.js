@@ -1,8 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 
+// Styles
+import styles from "./Pages.module.css";
+
 // Components
-import CardMovie from "./shared/CardMovie";
+import Card from "./shared/Card";
 import CustomPagination from "./shared/Pagination";
 
 // Context
@@ -29,15 +32,24 @@ const MoviePage = () => {
 
   return (
     <div>
-      {movies.map((movie) => (
-        <CardMovie data={movie} key={movie.id} type="movie"></CardMovie>
-      ))}
-      <CustomPagination
-        currentPage={params.page}
-        totalPages={500}
-        variableName="movies"
-        location={location}
-      />
+      <div className={styles.cardContainer}>
+        {movies.map((movie) => (
+          <Card
+            className={styles.card}
+            data={movie}
+            key={movie.id}
+            type="movie"
+          ></Card>
+        ))}
+      </div>
+      <div className={styles.paginationContainer}>
+        <CustomPagination
+          currentPage={params.page}
+          totalPages={500}
+          variableName="movies"
+          location={location}
+        />
+      </div>
     </div>
   );
 };
