@@ -1,0 +1,43 @@
+.container {
+    direction: rtl;
+    padding: 20px;
+    background-color: #7a7777;
+    display: flex;
+    gap: 10px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+    height: 100dvh;
+}
+
+.image {
+    width: 20dvw;
+    margin: auto;
+    border-radius: 5px;
+    border: 2px solid #FFFF00;
+}
+
+.textsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    direction: rtl;
+    height: 70dvh;
+    margin-top: 20dvh;
+    width: 70dvw;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 5dvw;
+    top: 20dvh;
+}
+
+.overview {
+    font-size: 15px;
+    line-height: 30px;
+}
