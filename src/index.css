@@ -1,4 +1,15 @@
+@font-face {
+  font-family: "Kalameh";
+  src: url(./assets/fonts/Kalameh-Regular.ttf);
+  src: url(./assets/fonts/Kalameh-Bold.ttf);
+}
+
+#root {
+  background-color: rgb(158, 158, 158);
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Kalameh";
 }
