@@ -16,7 +16,7 @@ const CustomPagination = ({ currentPage, totalPages, variableName }) => {
   return (
     <Pagination
       boundaryCount={2}
-      siblingCount={0}
+      siblingCount={2}
       page={currentPage}
       count={totalPages}
       renderItem={(item) => (
