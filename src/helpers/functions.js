@@ -1,7 +1,11 @@
 const shorten = (title) => {
   const splitedTitle = title.split(" ");
-  const newTitle = `${splitedTitle[0]} ${splitedTitle[1]}`;
-  return newTitle;
+  if (splitedTitle.length >= 2) {
+    const newTitle = `${splitedTitle[0]} ${splitedTitle[1]}`;
+    return newTitle;
+  } else {
+    return title;
+  }
 };
 
 export { shorten };

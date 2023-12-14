@@ -25,8 +25,7 @@ const Card = (props) => {
       />
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>
-          {type === "movie" ? shorten(title) : null}
-          {type !== "movie" ? shorten(name) : null}
+          {type === "movie" ? shorten(title) : shorten(name)}
         </h2>
         <h3 className={styles.language}>{original_language}</h3>
       </div>

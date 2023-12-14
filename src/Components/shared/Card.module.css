@@ -5,7 +5,7 @@
     padding: 50px;
     margin: 20px 0;
     position: relative;
-    border: 1px solid;
+    border: 10px solid yellow;
     border-radius: 8px;
 }
 
@@ -13,19 +13,17 @@
     width: 30px;
     height: 30px;
     background-color: yellow;
-    border-radius: 15px;
+    border-radius: 0 0 0 10px;
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 0;
+    right: 0;
     padding: 7px;
 }
 
 .vote {
     width: 100%;
     position: absolute;
-    left: 30%;
-    top: 30%;
-
+    text-align: center;
 }
 
 .poster {
