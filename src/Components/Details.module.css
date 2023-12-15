@@ -46,4 +46,20 @@
     .container {
         display: block;
     }
+
+    .image {
+        display: inline-block;
+        width: 60dvw;
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 5dvw;
+    }
+
+
 }
