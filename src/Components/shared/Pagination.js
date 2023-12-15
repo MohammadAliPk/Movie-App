@@ -15,10 +15,12 @@ const CustomPagination = ({ currentPage, totalPages, variableName }) => {
 
   return (
     <Pagination
-      boundaryCount={2}
-      siblingCount={2}
+      boundaryCount={1}
+      siblingCount={1}
       page={currentPage}
       count={totalPages}
+      variant="outlined"
+      shape="rounded"
       renderItem={(item) => (
         <PaginationItem
           component={Link}
