@@ -1,23 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// Styles
-import styles from "./Header.module.css";
+import './Header.css';
 
 const Header = () => {
+
   return (
-    <div className={styles.container}>
-      <h1 className={styles.logo}>Movie App</h1>
-      <Link to="/movies" className={styles.link}>
+    <nav className="bm-item-list">
+      <h1 id="logo" className="bm-item">Movie App</h1>
+      <Link to="/movies" className="bm-item">
         Movies
       </Link>
-      <Link to="/series" className={styles.link}>
+      <Link to="/series" className="bm-item">
         Series
       </Link>
-      <Link to="trending" className={styles.link}>
+      <Link to="/trending" className="bm-item">
         Trendings
       </Link>
-    </div>
+    </nav>
   );
 };
 
