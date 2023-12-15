@@ -45,6 +45,7 @@
 @media screen and (max-width: 767px) {
     .container {
         display: block;
+        height: 100%;
     }
 
     .image {
@@ -59,7 +60,7 @@
         margin: 0;
         position: absolute;
         right: 5dvw;
-        top: 100;
+        top: unset;
     }
 
 
