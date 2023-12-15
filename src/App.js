@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { scaleRotate as Menu } from 'react-burger-menu';
 
 
 // Context
@@ -20,14 +19,14 @@ import Footer from "./Components/shared/Footer";
 import "./Components/shared/Header.css";
 
 const App = () => {
+
+
   return (
     <div id="outer-container">
       <MovieContextProvider>
         <SeriesContextProvider>
           <TopRatedContextProvider>
-            <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
-              <Header />
-            </Menu>
+            <Header />
             <main id="page-wrap">
               <Routes >
                 <Route path="/movies/:id" element={<MoviePage />} />
@@ -42,7 +41,7 @@ const App = () => {
           </TopRatedContextProvider>
         </SeriesContextProvider>
       </MovieContextProvider>
-    </div>
+    </div >
   );
 };
 
