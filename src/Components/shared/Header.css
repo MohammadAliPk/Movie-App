@@ -70,3 +70,13 @@
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
 }
+
+/* custom css */
+h1 {
+    font-weight: bold;
+}
+
+h1:hover {
+    color: #fff !important;
+
+}
